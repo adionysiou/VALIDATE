@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VALIDATE — MSCA Postdoctoral Fellowship</title>
+  <meta name="description" content="Official website for an MSCA Postdoctoral Fellowship: objectives, activities, publications, news, partners, and contact." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230e2a47'/%3E%3Ctext x='32' y='39' font-size='28' text-anchor='middle' fill='white' font-family='system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif'%3EMS%3C/text%3E%3C/svg%3E" />
+  <!-- TailwindCSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    /* Simple focus outline for accessibility */
+    :focus-visible { outline: 3px solid #0ea5e9; outline-offset: 2px; }
+  </style>
+  <script>
+    // Tailwind config (optional custom colors close to EU blue/gold)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            euBlue: '#003399',
+            euGold: '#FFCC00',
+            dark: '#0b1b2b'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-900">
+  <!-- Top notice ribbon -->
+  <div class="bg-euGold text-slate-900 text-center text-sm py-2">
+    This project has received funding from the European Union’s Horizon Europe programme under the Marie Skłodowska‑Curie grant agreement No. <span class="font-semibold">101206668</span>.
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#home" class="flex items-center gap-3">
+          <!--span class="inline-flex h-9 w-11 rounded-lg bg-euBlue items-center justify-center text-white font-bold">MSCA</span>-->
+          <div class="leading-tight">
+            <div class="font-semibold">VALIDATE</div>
+            <div class="text-xs text-slate-500">MSCA Postdoctoral Fellowship</div>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#about" class="hover:text-euBlue">About</a>
+          <a href="#objectives" class="hover:text-euBlue">Objectives</a>
+          <a href="#activities" class="hover:text-euBlue">Activities</a>
+          <a href="#publications" class="hover:text-euBlue">Outputs</a>
+          <a href="#news" class="hover:text-euBlue">News</a>
+          <a href="#partners" class="hover:text-euBlue">Partners</a>
+          <a href="#contact" class="hover:text-euBlue">Contact</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-slate-300 hover:bg-slate-100" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200 bg-white">
+      <nav class="max-w-7xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="#about" class="py-2">About</a>
+        <a href="#objectives" class="py-2">Objectives</a>
+        <a href="#activities" class="py-2">Activities</a>
+        <a href="#publications" class="py-2">Outputs</a>
+        <a href="#news" class="py-2">News</a>
+        <a href="#partners" class="py-2">Partners</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-euBlue to-slate-800"></div>
+    <svg aria-hidden="true" class="absolute -right-20 top-10 opacity-20" width="420" height="420" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#FFCC00" d="M35.8,-43.6C46.8,-37.7,56.3,-27.3,62.1,-14.8C67.9,-2.3,69.9,12.2,65.4,24.8C60.9,37.3,49.8,47.9,36.8,53.9C23.8,60,8.9,61.6,-5.6,64.7C-20,67.8,-34,72.4,-45.7,67.6C-57.4,62.8,-66.9,48.6,-70.4,33.4C-73.9,18.2,-71.5,2,-64.9,-10.8C-58.2,-23.5,-47.3,-33,-35.7,-38.7C-24.2,-44.5,-12.1,-46.5,0.2,-46.7C12.5,-46.8,24.9,-45.2,35.8,-43.6Z" transform="translate(100 100)"/></svg>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-28 text-white">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">VALIDATE</h1>
+        <p class="whitespace-nowrap mt-4 text-lg text-slate-100">VALIDATing SEcurity Safeguards in Binaries Compiled with Memory-Safe Languages Pre-Execution</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#about" class="inline-flex items-center px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow hover:shadow-md">Explore the project</a>
+          <a href="#publications" class="inline-flex items-center px-5 py-3 rounded-xl ring-1 ring-white/70 text-white hover:bg-white/10">Project outputs</a>
+        </div>
+        <div class="mt-10 flex items-center gap-4">
+          <div class="inline-flex items-center gap-2 text-sm text-slate-100">
+            <span class="inline-block h-4 w-6 bg-euGold rounded-[2px]" aria-hidden="true"></span>
+            <span>Horizon Europe • MSCA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-3 gap-10 items-start">
+        <div class="lg:col-span-2">
+          <h2 class="text-3xl font-bold tracking-tight">About the Project</h2>
+          <p class="mt-4 text-slate-600">The emergence of memory-safe programming languages like Rust, Go, and Swift has significantly enhanced security by mitigating common memory-related vulnerabilities with minimal performance loss. Traditionally, memory safety was enforced through run-time support (e.g. Java), which executes bytecode but incurs significant performance overhead. In contrast, Rust, Go, Swift, and similar languages provide memory safety without heavy run-time support, delivering fast, secure machine code instead of virtual bytecode assessed at run-time. The core idea is to let the compiler vet about the security of a program by rejecting insecure code and by injecting certain checks in the produced machine code. However, the lack of run-time protection introduces a new attack vector. Specifically, developers themselves can become attackers by subtly manipulating binaries compiled with memory-safe languages, introducing deliberate vulnerabilities. These compromised binaries, disguised as secure, can bypass app store screening processes and become malicious post-installation through remote exploitation. This underscores the need for a robust validation mechanism to complement existing screening processes. To address this, we introduce VALIDATE (VALIDATing SEcurity Safeguards in Binaries Compiled with Memory-Safe Languages Pre-Execution), a validation mechanism ensuring that binaries compiled with memory-safe languages retain their intended security properties before execution. VALIDATE operates at the final executable level, where no further code alterations can occur, providing accurate end-to-end security guarantees. By advancing static and dynamic analysis techniques beyond the state-of-the-art, VALIDATE ensures that security guarantees enforced at compile-time remain intact at load-time. Integrating VALIDATE with app store screening processes enhances cybersecurity and maintains user trust by ensuring that memory-safe advertised software is indeed safe before execution.</p>
+          <div class="mt-6 grid sm:grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl border bg-white">
+              <h3 class="font-semibold">Host Institution</h3>
+              <p class="mt-2 text-sm text-slate-600">TECHNISCHE UNIVERSITEIT DELFT (DELFT UNIVERSITY OF TECHNOLOGY), THE NETHERLANDS 🇳🇱.</p>
+            </div>
+            <div class="p-6 rounded-2xl border bg-white">
+              <h3 class="font-semibold">Fellow</h3>
+              <p class="mt-2 text-sm text-slate-600 flex items-center gap-2">
+                <img src="my-photo.jpg" alt="Antreas Dionysiou" class="w-6 h-6 rounded-full" />
+                <a href="https://adionysiou.github.io/" class="text-blue-600 hover:underline">
+                Antreas Dionysiou, PhD.
+                </a>
+            </p>
+            </div>
+          </div>
+        </div>
+        <aside class="space-y-4">
+          <div class="p-6 rounded-2xl bg-white border">
+            <h3 class="font-semibold">Grant Details</h3>
+            <dl class="mt-2 text-sm text-slate-600 grid grid-cols-3 gap-y-1">
+              <dt class="col-span-2">Programme</dt><dd>HORIZON-MSCA-2024-PF-01</dd>
+              <dt class="col-span-2">Duration</dt><dd>01/09/2025–31/08/2027 (2 years)</dd>
+              <dt class="col-span-2">Grant No.</dt><dd>101206668</dd>
+              <dt class="col-span-2">Acronym</dt><dd>VALIDATE</dd>
+            </dl>
+          </div>
+          <div class="p-5 rounded-2xl bg-white border">
+            <h3 class="font-semibold">Quick Links</h3>
+            <ul class="mt-2 list-disc list-inside text-sm text-slate-600 space-y-1">
+              <li><a class="underline hover:text-euBlue" href="#publications">Publications</a></li>
+              <li><a class="underline hover:text-euBlue" href="#news">News & Events</a></li>
+              <li><a class="underline hover:text-euBlue" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objectives -->
+  <section id="objectives" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Objectives</h2>
+      <p class="mt-4 text-slate-600">Outline 3–5 clear, measurable objectives aligned with scientific excellence, training, and impact.</p>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border">
+  <div class="text-euBlue font-semibold">Objective 1</div>
+  <p class="mt-2 text-sm text-slate-600">
+    Assess and expand static and dynamic analysis techniques to <b>detect</b> security checks implemented in memory-safe programming languages.
+  </p>
+</div>
+
+<div class="p-6 rounded-2xl border">
+  <div class="text-euBlue font-semibold">Objective 2</div>
+  <p class="mt-2 text-sm text-slate-600">
+    Assess and expand analysis methods to <b>validate</b> the integrity of security checks introduced by memory-safe languages.
+  </p>
+</div>
+
+<div class="p-6 rounded-2xl border">
+  <div class="text-euBlue font-semibold">Objective 3</div>
+  <p class="mt-2 text-sm text-slate-600">
+    Design and implement an automated framework to evaluate the security of binaries compiled with memory-safe languages, ensuring they comply with expected standards and remain uncompromised before execution.
+  </p>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Activities / Timeline -->
+  <section id="activities" class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <h2 class="text-3xl font-bold tracking-tight">Activities & Timeline</h2>
+        <a href="#news" class="text-sm underline hover:text-euBlue">See all updates</a>
+    </div>
+    <div class="mt-8 grid lg:grid-cols-1 gap-6">
+<div class="rounded-2xl border bg-white p-6 w-full">
+  <h3 class="font-semibold">Planned Activities</h3>
+  <ul class="mt-3 space-y-2 text-sm text-slate-600">
+    <li>• <strong>WP1 – Project Management & Coordination:</strong> Routine meetings, progress monitoring, mid-term and final reports.</li>
+    <li>• <strong>WP2 – Training & Career Development:</strong> Personalized Career Development Plan (PCDP), courses, networking, and participation in major conferences.</li>
+    <li>• <strong>WP3 – Analysis of Security Checks:</strong> Identify and study security checks in binaries compiled with memory-safe languages; construct datasets of legitimate and tampered binaries.</li>
+    <li>• <strong>WP4 – Extending Analysis Techniques:</strong> Advance static and dynamic analysis methods (including ML/CFG approaches) to detect modified security checks at the binary level.</li>
+    <li>• <strong>WP5 – Implementation & Evaluation:</strong> Build and test the VALIDATE framework; evaluate detection accuracy, efficiency, scalability; release tools as open source.</li>
+    <li>• <strong>WP6 – Dissemination, Communication & Outreach:</strong> Publications, presentations, project website, social media, outreach activities, and stakeholder engagement.</li>
+  </ul>
+</div>
+
+        <!--
+        <div class="rounded-2xl border bg-white p-6">
+          <h3 class="font-semibold">Milestones</h3>
+          <ol class="mt-3 space-y-3 text-sm text-slate-600">
+            <li><span class="font-medium text-slate-800">M1:</span> Project kickoff (Month 1)</li>
+            <li><span class="font-medium text-slate-800">M2:</span> First deliverable submitted (Month 6)</li>
+            <li><span class="font-medium text-slate-800">M3:</span> Secondment completed (Month 12)</li>
+            <li><span class="font-medium text-slate-800">M4:</span> Mid‑term review (Month 18)</li>
+            <li><span class="font-medium text-slate-800">M5:</span> Final dissemination event (Month 24)</li>
+          </ol>
+        </div>
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications / Outputs -->
+  <section id="publications" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Outputs</h2>
+      <p class="mt-4 text-slate-600">Peer‑reviewed publications, datasets, software, posters, and presentations.</p>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <article class="p-5 rounded-2xl border bg-white">
+          <h3 class="font-semibold leading-tight">Example Publication Title</h3>
+          <p class="mt-2 text-sm text-slate-600">Journal, Year — <a class="underline" href="#">DOI</a></p>
+        </article>
+        <!--
+        <article class="p-5 rounded-2xl border bg-white">
+          <h3 class="font-semibold leading-tight">Conference Paper Title</h3>
+          <p class="mt-2 text-sm text-slate-600">Proceedings, Year — <a class="underline" href="#">PDF</a></p>
+        </article>
+        <article class="p-5 rounded-2xl border bg-white">
+          <h3 class="font-semibold leading-tight">Dataset / Software</h3>
+          <p class="mt-2 text-sm text-slate-600">Repository — <a class="underline" href="#">GitHub/Zenodo</a></p>
+        </article>
+    -->
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <h2 class="text-3xl font-bold tracking-tight">News & Events</h2>
+        <a href="#contact" class="text-sm underline hover:text-euBlue">Send us a news tip</a>
+      </div>
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-2xl border bg-white p-5">
+  <div class="text-xs text-slate-500">01 Sep 2025</div>
+  <h3 class="mt-1 font-semibold">Kick-off Meeting at TU Delft</h3>
+  <p class="mt-2 text-sm text-slate-600">
+    The kick-off meeting was held on September 1st, 2025, marking the official start of the project. 
+    We defined the immediate action points and discussed the project’s objectives and next steps.
+  </p>
+  <!--<a href="#" class="mt-3 inline-block text-sm underline">Read more</a>-->
+</article>
+    <!--
+        <article class="rounded-2xl border bg-white p-5">
+          <div class="text-xs text-slate-500">DD Mon YYYY</div>
+          <h3 class="mt-1 font-semibold">Conference presentation accepted</h3>
+          <p class="mt-2 text-sm text-slate-600">Brief description. Replace with your own content.</p>
+          <a href="#" class="mt-3 inline-block text-sm underline">Read more</a>
+        </article>
+        <article class="rounded-2xl border bg-white p-5">
+          <div class="text-xs text-slate-500">DD Mon YYYY</div>
+          <h3 class="mt-1 font-semibold">Preprint released on arXiv</h3>
+          <p class="mt-2 text-sm text-slate-600">Brief description. Replace with your own content.</p>
+          <a href="#" class="mt-3 inline-block text-sm underline">Read more</a>
+        </article>
+    -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Partners / Logos -->
+  <section id="partners" class="py-16 sm:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Partners</h2>
+      <p class="mt-4 text-slate-600">
+        Host Institution: TU Delft (Delft University of Technology) 🇳🇱<br>
+        Secondment Host: IMDEA Software Institute 🇪🇸
+     </p>
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <!-- Placeholder logo cards -->
+        <div class="aspect-[4/3] rounded-xl border bg-white flex items-center justify-center text-sm text-slate-500">   <img src="TUDelft_logo_descriptor_rgb.png"/></div>
+        <div class="aspect-[4/3] rounded-xl border bg-white flex items-center justify-center text-sm text-slate-500"><img src="Imdea-software-institute-logo.png"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 sm:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-bold tracking-tight">Contact</h2>
+      <p class="mt-4 text-slate-600">For media or collaboration inquiries, please email us. Add your institutional address or a dedicated project mailbox.</p>
+      <div class="mt-6 rounded-2xl border bg-white p-6">
+        <dl class="grid sm:grid-cols-3 gap-y-3 text-sm">
+          <dt class="font-medium">Email</dt><dd class="sm:col-span-2"><a class="underline" href="mailto:validatemscaproject@gmail.com">validatemscaproject@gmail.com</a> or <a class="underline" href="mailto:A.Dionysiou@tudelft.nl">a.dionysiou@tudelft.nl</a></dd>
+          <dt class="font-medium">Address</dt><dd class="sm:col-span-2">Faculty of Electrical Engineering, Mathematics, and Computer Science | Cybersecurity Group <br>
+            Delft University of Technology<br>
+            Van Mourik Broekmanweg 5<br>
+            2628 XE Delft, The Netherlands<br>
+            Echo Building, Office 02.310</dd>
+          <dt class="font-medium">Social</dt><dd class="sm:col-span-2"> <a class="underline" href="#">Twitter/X</a> · <a class="underline" href="#">LinkedIn</a> · <a class="underline" href="#">GitHub</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex items-center justify-center gap-2 text-sm text-slate-600">
+      <img src="EN_FundedbytheEU_RGB_POS-2048x456.png" alt="European Union emblem" class="h-28 w-auto" />
+      <span>
+        This project has received funding from the European Union's Horizon Europe research and innovation programme 
+        under the Marie Skłodowska-Curie grant agreement No. 101206668. Views and opinions expressed are however those of the author(s) only and do not necessarily 
+      reflect those of the European Union or the European Research Executive Agency (REA). 
+      Neither the European Union nor the granting authority can be held responsible for them.
+      </span>
+    </div>
+  </div>
+  </footer>
+
+  <!-- Minimal JS for mobile menu and year -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
